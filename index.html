@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- Head section: Includes scripts, styles, and metadata -->
+<head>
+    <title>{{ SSD: Spatial-Semantic Head Decoupling for Efficient Autoregressive Image Generation }}</title>  <!-- Placeholder for paper title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="{{ og_description }}"/>  <!-- Placeholder for OG description -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=FontAwesome" rel="stylesheet">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="{{ twitter_creator }}">  <!-- Placeholder for Twitter creator -->
+    <meta name="twitter:title" content="{{ twitter_title }}">  <!-- Placeholder for Twitter title -->
+</head>
+<body>
+<div class="container">
+    <!-- Paper title section -->
+    <div class="paper-title">
+        <h1>{{ formatted_title }}</h1>  <!-- Placeholder for formatted paper title -->
+    </div>
+    <!-- Authors and affiliations -->
+    <div id="authors">
+        <center>
+            <div class="author-row-new">
+                {{ authors_list }}  <!-- Placeholder for authors with links and superscripts -->
+            </div>
+        </center>
+        <center>
+            <div class="affiliations">
+                {{ affiliations_list }}  <!-- Placeholder for affiliations -->
+            </div>
+            <div class="affiliations">
+                {{ equal_advising_note }}  <!-- Placeholder for equal advising note -->
+            </div>
+            <div class="affil-row">
+                <div class="venue text-center"><b>{{ venue }}</b></div>  <!-- Placeholder for venue -->
+            </div>
+        </center>
+        <!-- Links to paper and code -->
+        <div style="clear: both">
+            <div class="paper-btn-parent">
+                <a class="paper-btn" href="{{ paper_url }}">
+                    <span class="fas fa-file-alt"></span>
+                    Paper
+                </a>
+                <a class="github-btn" href="{{ code_url }}">
+                    <span class="fab fa-github"></span>
+                    Code
+                </a>
+            </div>
+        </div>
+        <!-- Main figure -->
+        <div class="figure">
+            <img src="{{ main_image }}" alt="Main Image">  <!-- Placeholder for main image -->
+        </div>
+    </div>
+    <!-- News section -->
+    <section id="news">
+        <h2>News</h2>
+        <hr>
+        <div class="row">
+            {{ news_items }}  <!-- Placeholder for news items -->
+        </div>
+    </section>
+    <!-- Overview section -->
+    <section>
+        <h2>Overview</h2>
+        <hr>
+        {{ overview_content }}  <!-- Placeholder for overview paragraphs and elements -->
+    </section>
+    <!-- Observations section -->
+    <section>
+        <h2>Observations</h2>
+        <hr>
+        {{ observations_content }}  <!-- Placeholder for observations content -->
+    </section>
+    <!-- Results section -->
+    <section>
+        <h2>Results</h2>
+        <hr>
+        {{ results_content }}  <!-- Placeholder for results content -->
+    </section>
+    <!-- Citation section -->
+    <section id="bibtex">
+        <h2>Citation</h2>
+        <hr>
+        <pre><code>{{ bibtex_entry }}</code></pre>  <!-- Placeholder for BibTeX entry -->
+    </section>
+</div>
+</body>
+</html>
