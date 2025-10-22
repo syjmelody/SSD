@@ -688,7 +688,9 @@
 
         <div class="paper-title">
 
-            <h1>SSD: Spatial-Semantic Head Decoupling for Efficient Autoregressive Image Generation</h1>
+            <h1>
+                SSD: <font color="#306fba">S</font>patial-<font color="#306fba">S</font>emantic Head <font color="#306fba">D</font>ecoupling for Efficient Autoregressive Image Generation
+            </h1>
 
         </div>
 
@@ -716,7 +718,7 @@
 
             <div class="paper-btn-parent">
 
-                <a class="paper-btn" href="your_paper_link">
+                <a class="paper-btn" href="https://arxiv.org/pdf/2510.18716v1">
 
                     <span class="fas fa-file-alt"></span> Paper
 
@@ -775,7 +777,7 @@
 
                 <p>
 
-                    In this work, we begin by identifying a distinct and prominent attention phenomenon,
+                    In this work, we identify a distinct and prominent attention phenomenon,
 
                     which we term spatial locality and emergent semantic sink. To leverage this key insight,
 
@@ -785,6 +787,7 @@
 
             </blockquote>
 
+
             <p>
 
                 Specifically, we compress the KV cache for all visual tokens by adaptively decoupling attention heads
@@ -793,11 +796,13 @@
 
                 for semantic-sink heads, it strategically preserves a compact set of highly-attended tokens.
 
-               
+                <div class="image-grid">
+                    <img src="./assets/observation_1.png" alt="PDF Image">
+                </div>  
 
-                Our extensive experiments demonstrate that the proposed method achieves a 5$\times$ reduction in memory usage
+                Experiments demonstrate that the proposed method achieves a 5&times reduction in memory usage
 
-                and a notable 6.6$\times$ speedup in overall throughput with only minimal visual quality loss,
+                and a notable 6.6&times speedup in overall throughput with only minimal visual quality loss,
 
                 thereby enabling highly efficient native autoregressive image generation on resource-constrained hardware.
 
@@ -813,7 +818,7 @@
 
             <p>
 
-                Subsequently, we introduce a key empirical observation:
+                We introduce a key empirical observation:
 
                 semantic information from textual prompts is preferentially injected into specific spatial regions
 
@@ -825,27 +830,52 @@
 
             </p>
 
+            <div class="image-grid">
+                <img src="assets/observation_2.png" alt="PDF Image">
+                <img src="assets/observation_3.png" alt="PDF Image">
+            </div>    
+
         </section>
 
         <section>
 
             <h2>Results</h2>
-
             <hr>
-
-            <h3>Efficiency</h3>
-
-            <h3>Visualization</h3>
-
-            <p></p>
+            <p>
+                We evaluate our framework across two memory scenarios: a low setting (20% token budget) 
+                and a high setting (50% token budget). SD achieves better GenEval and DPG-Bench scores than H2O and
+                StreamingLLM under 20% and 50% token budgets, comparable to the performance of the vanilla
+                full-cache baseline. 
+            </p>    
 
             <div class="image-grid">
-
-                <img src="assets/your_image1.png" alt="Image 1">
-
-<!--                 <img src="assets/your_image2.png" alt="Image 2"> -->
-
+                <img src="assets/results_0.png" alt="PDF Image">
             </div>
+
+            <p>
+                We further demonstrate that
+                SSD maintains robust performance across compression ratios, with minimal degradation even at
+                20% cache size, aligning with our hypothesis that combining window-based and attention-based
+                compression leverages both local and global dependencies effectively.
+            </p>
+
+            <div class="image-grid">
+                <img src="assets/results_1.png" alt="PDF Image">
+            </div>   
+
+            <h3>Efficiency</h3>
+            <p>
+                SSD demonstrates superior efficiency compared to full cache, achieving up to 6.6&times; throughput improvement 
+                and 5&times; memory reduction, which highlights its practical advantage in real-world deployment scenarios.
+                SSD with buffer method delivers significant performance improvements—achieving up to 10.7&times; higher
+                throughput than full cache—while reducing memory consumption by approximately 80%.
+            </p>
+
+            <div class="image-grid">
+                <img src="assets/results_2.png" alt="PDF Image">
+            </div>   
+
+            <p></p>
 
         </section>
 
